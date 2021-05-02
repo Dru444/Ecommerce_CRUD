@@ -20,12 +20,14 @@
             <p class="cus">Description: {{ object.description }}</p>
             <p class="cus">Manufacturer: {{ object.manufacturer }}</p>
             <p class="cus">Manufactured Date: {{ object.date_manufactured }}</p>
-            <p class="cus">Price: {{ object.price }}</p>
+            <p class="cus">Price: RS. {{ object.price }}</p>
             <p class="cus">Availablity: {%if object.availablity%} Yes {%else%} No {%endif%} </p>
             <p class="cus">Category: {{ object.category }}</p>
             <p class="cus">Offers :{%for i in object.offers%} {{i}} <br> {% endfor %}</p>
             <p class="cus">Warranty : {{object.warranty}}</p>
+            <a class = 'btn btn-primary'href="{% url "product_list" %}">Go Back</a></center>
         </center>
     </div>
+    
 
 </body>

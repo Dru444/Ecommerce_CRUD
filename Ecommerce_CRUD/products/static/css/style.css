@@ -18,6 +18,14 @@ div.cus{
 body.cus{
     background-color: #abdde5;
 }
+a.cus{
+   
+    margin-bottom: 20px;
+    
+}
+th{
+    text-align: center;
+}
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -318,9 +326,7 @@ caption {
     caption-side: bottom
 }
 
-th {
-    text-align: left
-}
+
 
 label {
     display: inline-block;
@@ -1548,10 +1554,11 @@ pre code {
 }
 
 .table {
-    width: auto;
+    width: 50%;
     max-width: 100%;
     margin-bottom: 1rem;
-    background-color: transparent
+    background-color: transparent;
+    font-size:22px; 
 }
 
 .table td,

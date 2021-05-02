@@ -14,8 +14,10 @@
 <form method="post">{% csrf_token %}
 <p class="cus"> Are you sure you want to delete "{{ object }}" ?</p>
 <center>
-<input class="btn btn-primary" type="submit" value="Submit" />
+<input class="btn btn-primary" type="submit" value="Yes" />
+<a class = 'btn btn-primary'href="{% url "product_list" %}">No</a>
 </center>
+
 </form>
 </div>
 </body>
