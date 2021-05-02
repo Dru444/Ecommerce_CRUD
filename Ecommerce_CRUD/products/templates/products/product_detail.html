@@ -1,31 +1,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
+
 
     {% load static %}
-   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body class="cus">
-    
-<h1 class="cus">Product Details</h1>
-<div class="cus">
 
-<img src="{{ object.photo.url }}" class="img-responsive" style=" border: 1px solid black; ;width: 220px; height: 220px; float: left; margin-right: 10px;" />
-<br>
+    <h1 class="cus">Product Details</h1>
+    <div class="cus" style="margin:50px 600px 50px; padding:50px; border:3px solid brown ; border-radius:5%;">
+        <center>
+            <img src="{{ object.photo.url }}" class="img-responsive"
+                style=" border: 1px solid black; ;width: 220px; height: 220px;  margin-right: 10px;" />
 
-<p class="cus">Name: {{object.name}}</p>
-<p class="cus">Description: {{ object.description }}</p>
-<p class="cus">Manufacturer: {{ object.manufacturer }}</p>
-<br>
-<br>
-<p class="cus">Manufactured Date: {{ object.date_manufactured }}</p>
-<p class="cus">Price: {{ object.price }}</p>
-<p class="cus">Availablity: {%if object.availablity%} Yes {%else%} No {%endif%} </p>
-<p class="cus">Category: {{ object.category }}</p>
-<p class="cus">Offers :{%for i in object.offers%} {{i}} {% endfor %}</p>
-<p class="cus">Warranty :{%for i in object.warranty%} {{i}} {% endfor %}</p>
-</div>
 
-</body> 
+            <p class="cus">Name: {{object.name}}</p>
+            <p class="cus">Description: {{ object.description }}</p>
+            <p class="cus">Manufacturer: {{ object.manufacturer }}</p>
+            <p class="cus">Manufactured Date: {{ object.date_manufactured }}</p>
+            <p class="cus">Price: {{ object.price }}</p>
+            <p class="cus">Availablity: {%if object.availablity%} Yes {%else%} No {%endif%} </p>
+            <p class="cus">Category: {{ object.category }}</p>
+            <p class="cus">Offers :{%for i in object.offers%} {{i}} <br> {% endfor %}</p>
+            <p class="cus">Warranty : {{object.warranty}}</p>
+        </center>
+    </div>
 
+</body>

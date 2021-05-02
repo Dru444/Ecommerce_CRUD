@@ -8,8 +8,10 @@
    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
 <body class="cus">
+
 <h1 class="cus">Product </h1>
-<form method="post" enctype="multipart/form-data" style="padding:0 250px; ">
+<form method="post" enctype="multipart/form-data" >
+  <div class="container" style="border: 1px solid #DDDDDD; border-radius: 10px; width:500px; background: #F9F9F9">
   <center>
 {% csrf_token %}
     {% for hidden_field in form.hidden_fields %}
@@ -25,7 +27,8 @@
   {% endif %}
 
   {% for field in form.visible_fields %}
-    <div class="form-group" style="list-style: none;">
+    <div class="form-group " >
+      <center>
       {{ field.label_tag }}
 
       {% if form.is_bound %}
@@ -46,10 +49,12 @@
       {% if field.help_text %}
         <small class="form-text text-muted">{{ field.help_text }}</small>
       {% endif %}
+    </center>
     </div>
   {% endfor %}
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" style="margin-bottom: 20px;">Submit</button>
   </center>
+</div>
 </form>
 </body>
